@@ -5,14 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="styles.css"> 
-    <script src="./script.js"></script> 
+    <link rel="stylesheet" href="./Assets/style.css"> 
+    
 
 </head>
 <body>
     <div class ="gridcard">
+        <h1>Search Location Weather</h1>
         <div class="huntsearch">
-            <input 
+            <input id="searchBox" placeholder="Las Vegas">
+            <button id="weatherButton">Weather Surf</button>
+           <div id="previouslysearchedCities"></div>
+<div class="weatherInfo">
+
+    <div class="localweatherBox">
+        <h1 class="city">Weather in Las Vegas</h1>
+        <div class="temperature">Temp: 50 Fahrenheit</div> 
+        <div class="wind">Wind: 10mph</div>
+        <div class="humidity">Humidity: 56%</div>
+        <div class="rainfall">Rainfall: 0%' inches</div>
+        <div class="UVindex">UV index: 2 low</div>
+
+    </div> 
+
+
+
+
+
+
+</div> 
+    
 
 
 
@@ -22,6 +44,6 @@
         
 
     </div>
-    
+    <script src="./Assets/script.js"></script> 
 </body>
 </html>
