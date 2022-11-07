@@ -6,12 +6,12 @@ var cityName = document.querySelector('.city');
 
 weatherButton.addEventListener('click', function(){
     console.log("weatherButton")
-    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${searchBox.value}&appid=961c08e4a008934a3cf03bcaca4ac1f3`)
+    // fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${searchBox.value}&appid=961c08e4a008934a3cf03bcaca4ac1f3`)
     .then(function(response) {/Users/annemariesheridan/Desktop/bootcamp/challenges/WeatherDashboard/Assets/06-server-side-apis-homework-demo.png
-    // console.log(response)
+    console.log(response)
     if (!response.ok){
-        throw response.json();
-    }
+        throw response.json()
+     } 
     return response.json();
     }).then(function(weatherInfo){
     console.log(weatherInfo)
