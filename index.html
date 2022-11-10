@@ -1,58 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="./Assets/style.css"> 
-    
+    <link rel="stylesheet" href="./Assets/style.css">
+
 
 </head>
+
 <body>
-    <div class ="gridcard">
+    <div class="gridcard">
         <h1>Search Location Weather</h1>
         <div class="huntsearch">
             <input id="searchBox" placeholder="Las Vegas">
             <button id="weatherButton">Weather Surf</button>
-           <div id="previouslysearchedCities"></div>
-<div class="weatherInfo">
+            <div id="previouslysearchedCities"></div>
+            <div class="weatherInfo">
 
-    <div class="localweatherBox">
-        <h1 class="city">Weather in Las Vegas</h1>
-        <div class="temperature">Temp: 50 Fahrenheit</div> 
-        <div class="wind">Wind: 10mph</div>
-        <div class="humidity">Humidity: 56%</div>
-        <div class="rainfall">Rainfall: 0%' inches</div>
-        <div 
-
+                <div class="localweatherBox">
+                    <h1 class="city">Weather in Las Vegas</h1>
+                    <img class="icon">
+                    <div class="temperature"></div>
+                    <div class="wind"></div>
+                    <div class="humidity"></div>
 
 
 
-
-<div class="fiveDayForecast"></div>
-
-<div class="nextdayWeather1"></div>
-<div class="nextdayWeather2"></div>
-<div class="nextdayWeather3"></div>
-<div class="nextdayWeather4"></div>
-
-<div class="nextdayWeather5"></div>
-
-</div>
-
-
-</div> 
-    
+                </div>
 
 
 
-         
 
-       
-        
 
-    </div>
-    <script src="./Assets/script.js"></script> 
+
+
+
+            </div>
+
+
+            <div class="fiveDayForecast">
+                <div class="nextdayWeather1 card">
+                    <h2 class="date1">   </h2>
+                    <img class="icon1">
+                    <div class="temp1">  </div>
+                    <div class="wind1"></div>
+                    <div class="humidity1"></div>  
+                </div>
+
+                <div class="nextdayWeather2 card">
+                    <h2 class="date2">   </h2>
+                    <img class="icon2">
+                    <div class="temp2">  </div>
+                    <div class="wind2"></div>
+                    <div class="humidity2"></div> 
+
+
+                </div>
+                <div class="nextdayWeather3 card">
+                    <h2 class="date3">   </h2>
+                    <img class="icon3">
+                    <div class="temp3">  </div>
+                    <div class="wind3"></div>
+                    <div class="humidity3"></div>
+
+
+
+                </div>
+                <div class="nextdayWeather4 card">
+                    <h2 class="date4">   </h2>
+                    <img class="icon4">
+                    <div class="temp4">  </div>
+                    <div class="wind4"></div>
+                    <div class="humidity4"></div>
+
+
+                </div>
+                <div class="nextdayWeather5 card">
+                    <h2 class="date5">   </h2>
+                    <img class="icon5">
+                    <div class="temp5">  </div>
+                    <div class="wind5"></div>
+                    <div class="humidity5"></div>
+
+
+                </div>
+
+            </div>
+
+            
+
+        </div>
+        <script src="./Assets/script.js"></script>
 </body>
+
 </html>

@@ -24,3 +24,7 @@ width: auto;
 margin: 100px;
 border: 2px solid blue;
 }
+
+.card{
+	border: 2px solid red;
+}
