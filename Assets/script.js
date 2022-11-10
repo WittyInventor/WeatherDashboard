@@ -51,13 +51,17 @@ weatherButton.addEventListener('click', function(){
 
     humidCity.innerHTML= "Humidity: " + weatherInfo.list[0].main.humidity + " mph"
     })
-    })
+    });
 
     // Below is the section organizing the future first day forecast from the current date's posted.
 
     var date1 = document.querySelector('.date1');
 
     var temp1 = document.querySelector('.temp1');
+
+    console.log("WEATHER INFO LIST 0",weatherInfo.list[1].main.temp)
+
+    console.log("WEATHER INFO LIST 0",weatherInfo.list[2].main.temp)
 
     temp1.innerHTML= "Temp: " + weatherInfo.list[1].main.temp1 + " F"
     

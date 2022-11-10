@@ -28,3 +28,12 @@ border: 2px solid blue;
 .card{
 	border: 2px solid red;
 }
+
+.nextdayWeather1 card {
+width: 400px;
+padding: 10px;
+background: rgb(180, 229, 207);
+border: 5px solid none;
+margin: 100px;
+border-radius: 2vh;
+}
