@@ -50,28 +50,38 @@ weatherButton.addEventListener('click', function(){
     
 
     humidCity.innerHTML= "Humidity: " + weatherInfo.list[0].main.humidity + " mph"
-    })
-    });
-
-    // Below is the section organizing the future first day forecast from the current date's posted.
-
-    var date1 = document.querySelector('.date1');
-
-    var temp1 = document.querySelector('.temp1');
 
     console.log("WEATHER INFO LIST 0",weatherInfo.list[1].main.temp)
 
     console.log("WEATHER INFO LIST 0",weatherInfo.list[2].main.temp)
 
-    temp1.innerHTML= "Temp: " + weatherInfo.list[1].main.temp1 + " F"
+    temp1.innerHTML= "Temp: " + weatherInfo.list[1].main.temp + " F"
+    humidity1.innerHTML= "Humidity: " + weatherInfo.list[1].main.humidity + " mph"
+
+    wind1.innerHTML= "Wind: " + weatherInfo.list[1].wind.speed + " mph"
+
+    cityName.innerHTML=weatherInfo.city.name + "  " + (date.getMonth() + 1) + "/" + date.getDate()
+    // im confused if this is right for the date showing for the future forecast..
+
+
+    })
+    });
+
+    // Below is the section organizing the future first day Var initialization for the 5 day forecast from the current date's posted.
+
+    var date1 = document.querySelector('.date1');
+
+    var temp1 = document.querySelector('.temp1');
+
+    
     
     var wind1 = document.querySelector('.wind1');
     
-    var humid1 = document.querySelector('.humid1');
+    var humidity1 = document.querySelector('.humidity1');
 
     var icon1 = document.querySelector('.icon1');
 
-    cityName.innerHTML=weatherInfo.city.name + "  " + (date.getMonth() + 1) + "/" + date.getDate()
+    // cityName.innerHTML=weatherInfo.city.name + "  " + (date.getMonth() + 1) + "/" + date.getDate()
     // im confused if this is right for the date showing for the future forecast..
 
 
