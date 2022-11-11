@@ -1,6 +1,6 @@
 # WeatherDashboard
 
-# Third-Party APIs: Work Day Scheduler
+# Server-Side APIs Challenge: Weather Dashboard
 
 ### Description: 
 I made this 5 day forecast so people can search the weather to see the current and future weather conditions that will match their dress as they leave the house. 
