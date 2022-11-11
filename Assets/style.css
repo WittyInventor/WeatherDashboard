@@ -22,12 +22,11 @@ border: radius 0.5em; ;
 height: 500px;
 width: auto;
 margin: 100px;
-border: 2px solid blue;
+display: flex; 
+flex-direction: row;
+justify-content: space-around;
 }
 
-.card{
-	border: 2px solid red;
-}
 
 .nextdayWeather1card {
 	width: 400px;
