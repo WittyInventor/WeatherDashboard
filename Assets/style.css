@@ -36,3 +36,17 @@ justify-content: space-around;
 	margin: 100px;
   border-radius: 2vh;
 }
+
+.topContainer {
+	display: flex;
+}
+
+.rightContainer img {
+	width: 1200px;
+}
+
+.rightContainer {
+	display: flex;
+	justify-content: right;
+	width: 100%;
+}
