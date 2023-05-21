@@ -4,6 +4,19 @@ whateverArrName[2]
 
 var searchBox = document.querySelector('#searchBox');
 
+
+var date1 = document.querySelector('.date1');
+
+var temp1 = document.querySelector('.temp1');
+
+
+
+var wind1 = document.querySelector('.wind1');
+
+var humidity1 = document.querySelector('.humidity1');
+
+var icon1 = document.querySelector('.icon1');
+
 var weatherButton = document.querySelector('#weatherButton');
 
 var cityName = document.querySelector('.city');
@@ -13,6 +26,8 @@ var tempCity = document.querySelector('.temperature');
 var windCity = document.querySelector('.wind');
 
 var humidCity = document.querySelector('.humidity');
+
+var weatherPhoto = document.querySelector('#weatherPhoto');
 
 var nextdayWeatherCards = document.querySelectorAll('.card');
 console.log(nextdayWeatherCards)
@@ -42,22 +57,19 @@ weatherButton.addEventListener('click', function () {
             let date = new Date(weatherInfo.list[0].dt * 1000)
             //  dt value means  milliseconds since Jan 1st 1970. It is multiplied(*) by 1000 to properly indicate the correct date.
 
+            humidCity.innerHTML = "<span> Humidity </span><span>" + weatherInfo.list[0].main.humidity + " mph </span>"
+
             cityName.innerHTML = weatherInfo.city.name + "  " + (date.getMonth() + 1) + "/" + date.getDate()
 
-            tempCity.innerHTML = "Temp: " + weatherInfo.list[0].main.temp + " F"
+            tempCity.innerHTML = "<span>Temp </span><span>" + weatherInfo.list[0].main.temp + " F </span>"
 
-            windCity.innerHTML = "Wind: " + weatherInfo.list[0].wind.speed + " mph"
-
-            // document.querySelector(".icon").setAttribute("src","https://openweathermap.org/img/wn/" + + "@2x.png")
-
-
-            humidCity.innerHTML = "Humidity: " + weatherInfo.list[0].main.humidity + " mph"
-
-            console.log("WEATHER INFO LIST 0", weatherInfo.list[1].main.temp)
-
-            console.log("WEATHER INFO LIST 0", weatherInfo.list[2].main.temp)
+            windCity.innerHTML = "<span>Wind</span><span>" + weatherInfo.list[0].wind.speed + " mph </span>"
 
             
+
+            
+
+            changePicture (weatherInfo.list[0].weather[0].main);
 
             // cityName.innerHTML=weatherInfo.city.name + "  " + (date.getMonth() + 1) + "/" + date.getDate()
             // im confused if this is right for the date showing for the future forecast..
@@ -84,17 +96,6 @@ weatherButton.addEventListener('click', function () {
 // Below is the section organizing the future first day Var initialization for the 5 day forecast from the current date's posted.
 
 
-var date1 = document.querySelector('.date1');
-
-var temp1 = document.querySelector('.temp1');
-
-
-
-var wind1 = document.querySelector('.wind1');
-
-var humidity1 = document.querySelector('.humidity1');
-
-var icon1 = document.querySelector('.icon1');
 
 // for (var i = 0; i < dailyForecast.length; i + 4) {
 
@@ -104,13 +105,19 @@ var icon1 = document.querySelector('.icon1');
 
 // cityName.innerHTML=weatherInfo.city.name + "  " + (date.getMonth() + 1) + "/" + date.getDate()
 // im confused if this is right for the date showing for the future forecast..
+l
+function changePicture (sTypeWeather) {
+    console.log(sTypeWeather)
+    switch (sTypeWeather) {
+        case "Clouds":
+            weatherPhoto.src = "./Assets/images/cloudy.jpg"
+            break;
 
-
-
-
-var bermuda = {
-    name: "leroy",
-    food: "turkey",
-    carabou: true
+        case "Clear":
+            weatherPhoto.src = "./Assets/images/clear.jpg"
+            break;
+    
+        default:
+            break;
+    } 
 }
-console.log(bermuda.food)
