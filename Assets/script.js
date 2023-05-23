@@ -77,7 +77,7 @@ weatherButton.addEventListener('click', function () {
             for (let i = 0; i < nextdayWeatherCards.length; i++) {
                 console.log(weatherInfo.list[(i*8)])
                 console.log(nextdayWeatherCards[i].children[0])
-                nextdayWeatherCards[i].children[0].innerHTML=weatherInfo.list[i*8].dt_txt
+                nextdayWeatherCards[i].children[0].innerHTML= formatDate('MonthDay', weatherInfo.list[i*8].dt_txt)
                 // nextdayWeatherCards[i].children[0] means targeting the specific element of nextdayWeatherCards which is children. 
 
                 nextdayWeatherCards[i].children[1].setAttribute("src", "https://openweathermap.org/img/wn/" + weatherInfo.list[i*8].weather[0].icon + "@2x.png")
@@ -116,8 +116,62 @@ function changePicture (sTypeWeather) {
         case "Clear":
             weatherPhoto.src = "./Assets/images/clear.jpg"
             break;
+
+             case "Mist":
+            weatherPhoto.src = "./Assets/images/mist.jpg"
+            break;
+
+             case "Fog":
+            weatherPhoto.src = "./Assets/images/fog.jpg"
+            break;
+
+             case "Rainy":
+            weatherPhoto.src = "./Assets/images/heavyrain.jpg"
+            break;
+
+             case "Snow":
+            weatherPhoto.src = "./Assets/images/heavySnow.jpg"
+            break;
+
+            case "Drizzle":
+            weatherPhoto.src = "./Assets/images/rainy.jpg"
+            break;
+
+            case "Thunderstorm":
+            weatherPhoto.src = "./Assets/images/thunderlightningstorm.jpg"
+            break;
+
+            case "Dust":
+            weatherPhoto.src = "./Assets/images/dust.jpg"
+            break;
+
+            case "Ash":
+            weatherPhoto.src = "./Assets/images/volcanicash.jpg"
+            break;
+
+            case "Haze":
+                weatherPhoto.src = "./Assets/images/haze.jpg"
+                break;
+
     
         default:
             break;
     } 
+}
+
+function formatDate (type, date) {
+    let d = date ? new Date(date) : new Date (),
+        sDay = d.getDate(),
+        sMonth = Number(d.getMonth())+1,
+        sFormatedDate='';
+
+    if(sMonth<10)
+        sMonth= '0'+sMonth;
+    
+    if(type=='MonthDay')// 05/22
+        sFormatedDate=`${sMonth}/${sDay}`;
+    
+
+    return sFormatedDate
+
 }

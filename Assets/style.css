@@ -43,6 +43,10 @@ font-size: 30px;
 	box-sizing: border-box;
 }
 
+.glassBoxOverlay h2 {
+	text-align: center;
+}
+
 .weatherInfo {
 		height: 67%;
 		display: flex;		
